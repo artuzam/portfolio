@@ -1,26 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import NavBar from '../components/NavBar.astro';
+import Section from '../components/Section.astro';
+import NavBar from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout
   title='Arturo Zamora - Software Engineer and UI / UX Designer'
   description='Work with Arturo to create unique software experiences.'
 >
-  <main>
+  <header>
     <NavBar />
-    <SectionContainer id='/' className='bg-[#F2FFD8]'>
-      <p class='text-lg text-gray-500'>Welcome to your new Astro site.</p>
-    </SectionContainer>
-    <SectionContainer id='about' className='bg-[#D8E0FF]'>
-      <p class='text-lg text-gray-500'>Welcome to your new Astro site.</p>
-    </SectionContainer>
-    <SectionContainer id='experience' className='bg-[#FFD8FB]'>
-      <p class='text-lg text-gray-500'>Welcome to your new Astro site.</p>
-    </SectionContainer>
-    <SectionContainer id='contact' className='bg-[#F2FFD8]'>
-      <p class='text-lg text-gray-500'>Welcome to your new Astro site.</p>
-    </SectionContainer>
+  </header>
+  <main
+    class={`
+			snap-y snap-mandatory 
+			relative w-full h-screen 
+			overflow-y-auto overflow-x-hidden scroll-smooth`}
+  >
+    <div class='snap-center'>
+      <Section id='/' color='#F2FFD8'>
+        <Hero />
+      </Section>
+    </div>
+    <div class='snap-center'>
+      <Section id='about' color='#D8E0FF'>
+        <Hero />
+      </Section>
+    </div>
+    <div class='snap-center'>
+      <Section id='experience' color='#FFD8FB'>
+        <Hero />
+      </Section>
+    </div>
+    <div id='/' class='snap-center'>
+      <Section id='contact' color='#F2FFD8'>
+        <Hero />
+      </Section>
+    </div>
   </main>
 </Layout>

@@ -1,0 +1,16 @@
+---
+interface SectionProps {
+  id: string;
+  color: string;
+}
+
+const { id, color = '' } = Astro.props as SectionProps;
+---
+
+<section
+  id={id}
+  data-section={id}
+  class={`section bg-[${color}] scroll-m-20 w-full mx-auto h-screen py-20 flex items-center flex-row justify-center gap-3`}
+>
+  <slot />
+</section>
