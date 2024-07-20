@@ -6,7 +6,7 @@ import Hero from '../components/Hero.astro';
 ---
 
 <Layout
-  title='Arturo Zamora - Software Engineer and UI / UX Designer'
+  title='Arturo Zamora - Software Engineer and UI/UX Designer'
   description='Work with Arturo to create unique software experiences.'
 >
   <header>
@@ -16,27 +16,21 @@ import Hero from '../components/Hero.astro';
     class={`
 			snap-y snap-mandatory 
 			relative w-full h-screen 
-			overflow-y-auto overflow-x-hidden scroll-smooth`}
+			overflow-y-auto overflow-x-hidden`}
   >
     <div class='snap-center'>
-      <Section id='/' color='#F2FFD8'>
+      <Section id='/' class='bg-background-green'>
         <Hero />
       </Section>
     </div>
     <div class='snap-center'>
-      <Section id='about' color='#D8E0FF'>
-        <Hero />
-      </Section>
+      <Section id='about' class='bg-background-blue' />
     </div>
     <div class='snap-center'>
-      <Section id='experience' color='#FFD8FB'>
-        <Hero />
-      </Section>
+      <Section id='experience' class='bg-background-pink' />
     </div>
     <div id='/' class='snap-center'>
-      <Section id='contact' color='#F2FFD8'>
-        <Hero />
-      </Section>
+      <Section id='contact' class='bg-background-green' />
     </div>
   </main>
 </Layout>

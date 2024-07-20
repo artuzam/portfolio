@@ -3,7 +3,7 @@ import AzLogo from './icons/AzLogo.astro';
 ---
 
 <nav
-  class='flex items-center justify-between pt-4 pr-10 pl-6 w-full fixed bg-white/5 backdrop-blur-xs shadow-xs z-10'
+  class='flex items-center justify-between pt-5 pr-10 pl-6 w-full fixed bg-white/5 backdrop-blur-xs shadow-xs z-10'
 >
   <a href='/'>
     <AzLogo class='size-8' />
@@ -21,7 +21,12 @@ import AzLogo from './icons/AzLogo.astro';
       </li>
     </ul>
     <div>
-      <a href='#contact'> Get in touch </a>
+      <a
+        href='#contact'
+        class='h-12 border-black border-2 p-2.5 bg-[#D7FC87] hover:bg-[#cbff5b] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#D7FC87]'
+      >
+        Get in touch
+      </a>
     </div>
   </a>
 </nav>
