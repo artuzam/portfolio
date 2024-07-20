@@ -2,9 +2,33 @@
 import Card from './Card.astro';
 ---
 
-<Card class='w-[850px] h-[320px] shadow-[32px_32px_0px#7BB500] mt-7 ml-5'>
+<Card
+  class=`w-[820px] h-[280px] mt-7 ml-5
+  shadow-[32px_32px_0px#7BB500] border-[8px]`
+>
   <h1 class='text-6xl'>Hi! My name is</h1>
   <h1 class='text-6xl text-accent-green mt-6'>Arturo Zamora</h1>
+</Card>
+
+<Card
+  class=`w-[400px] h-[120px] mt-[60px] ml-[375px]
+  shadow-[32px_32px_0px#7BB500] border-[8px]`
+>
+  <p class='text-xl text-pretty'>
+    I’m a Software Engineer and UI/UX Designer based in
+    <strong class='text-accent-green'>Costa Rica</strong>.
+  </p>
+</Card>
+
+<Card
+  class=`absolute w-[300px] h-[375px] shadow-[32px_32px_0px#7BB500]
+  right-[175px] bottom-[150px] border-[8px]`
+>
+  <img
+    src='/profile-pic.webp'
+    alt='Arturo Zamora'
+    class='w-full h-full object-cover'
+  />
 </Card>
 
 <style>

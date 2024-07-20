@@ -1,10 +1,9 @@
 ---
 interface SectionProps {
   id: string;
-  color: string;
 }
 
-const { id, color = '' } = Astro.props as SectionProps;
+const { id } = Astro.props as SectionProps;
 ---
 
 <section
