@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import NavBar from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
 ---
 
 <Layout
@@ -19,12 +20,14 @@ import Hero from '../components/Hero.astro';
 			overflow-y-auto overflow-x-hidden`}
   >
     <div class='snap-center'>
-      <Section id='/' class='bg-background-green'>
+      <Section id='/' class='bg-background-green' maxWidth='1200'>
         <Hero />
       </Section>
     </div>
     <div class='snap-center'>
-      <Section id='about' class='bg-background-blue' />
+      <Section id='about' class='bg-background-blue' maxWidth='1100'>
+        <About />
+      </Section>
     </div>
     <div class='snap-center'>
       <Section id='experience' class='bg-background-pink' />
