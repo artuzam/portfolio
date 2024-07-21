@@ -6,16 +6,16 @@ import Card from './Card.astro';
   <div class='my-auto w-full flex flex-col items-center'>
     <Card
       class=`w-3/4 md:w-full max-w-[820px] h-auto max-h-[250px]
-      md:h-[280px] mx-auto md:ml-5 lg:mt-10 lg:ml-7
-      shadow-[16px_16px_0px#7BB500] md:shadow-[32px_32px_0px#7BB500] border-[8px]`
+      md:h-[280px] mx-auto md:ml-5 lg:mt-10 lg:ml-7 px-8 py-4
+      shadow-[16px_16px_0px#7BB500] md:shadow-[24px_24px_0px#7BB500] border-[8px]`
     >
       <h1 class='text-3xl md:text-4xl lg:text-5xl'>Hi! My name is</h1>
       <h1 class='text-3xl md:text-5xl text-accent-green mt-6'>Arturo Zamora</h1>
     </Card>
 
     <Card
-      class=`w-3/4 md:w-[400px] h-auto md:h-[120px] mx-auto mt-12 lg:mt-[60px] lg:ml-[325px]
-      shadow-[16px_16px_0px#7BB500] md:shadow-[32px_32px_0px#7BB500] border-[8px]`
+      class=`w-3/4 md:w-[400px] h-auto md:h-[120px] mx-auto mt-12 lg:mt-[60px] lg:ml-[325px] px-8 py-4
+      shadow-[16px_16px_0px#7BB500] md:shadow-[24px_24px_0px#7BB500] border-[8px]`
     >
       <p class='text-md md:text-xl text-pretty'>
         I’m a Software Engineer and UI/UX Designer based in
@@ -25,13 +25,13 @@ import Card from './Card.astro';
   </div>
   <div class='hidden md:flex w-full' '>
     <Card
-      class=`w-full max-w-[330px] h-full max-h-[400px] shadow-[32px_32px_0px#7BB500]
-      mt-[85px] mx-auto border-[8px]`
+      class=`w-full max-w-[330px] h-full max-h-[435px] shadow-[24px_24px_0px#7BB500]
+      mt-10 mx-auto border-black border-[8px]`
     >
       <img
         src='/profile-pic.webp'
         alt='Arturo Zamora'
-        class='w-full h-full object-cover border-black border-[3px]'
+        class='w-full h-full object-cover'
       />
     </Card>
   </div>
