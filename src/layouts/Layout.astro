@@ -19,11 +19,16 @@ const { title, description } = Astro.props;
       rel='stylesheet'
     />
     <title>{title}</title>
+    <script
+      defer
+      src='https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js'
+    ></script>
   </head>
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
   html {
     font-family: system-ui, sans-serif;

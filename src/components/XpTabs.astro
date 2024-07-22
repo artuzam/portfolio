@@ -1,0 +1,65 @@
+---
+// Import Card component
+import Card from './Card.astro';
+---
+
+<div x-data="{ tab: 'grid' }">
+  <!-- Tab Buttons -->
+  <div class='flex space-x-4 mb-4'>
+    <button
+      @click="tab = 'grid'"
+      :class="{ 'bg-accent-pink text-white': tab === 'grid' }"
+      class='px-4 py-2'>Projects</button
+    >
+    <button
+      @click="tab = 'single'"
+      :class="{ 'bg-accent-pink text-white': tab === 'single' }"
+      class='px-4 py-2'>Experience</button
+    >
+  </div>
+
+  <!-- Tab Content -->
+  <div
+    x-show="tab === 'grid'"
+    x-transition:enter='transition ease-out duration-1000'
+    x-transition:enter-start='transform scale-x-0 origin-left'
+    x-transition:enter-end='transform scale-x-1 origin-left'
+    class='grid grid-cols-3 gap-4 auto-rows-[16rem]'
+  >
+    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <!-- Content for Card 1 -->
+    </Card>
+    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <!-- Content for Card 2 -->
+    </Card>
+    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <!-- Content for Card 3 -->
+    </Card>
+  </div>
+  <div
+    x-show="tab === 'single'"
+    x-transition:enter='transition ease-out duration-1000'
+    x-transition:enter-start='transform scale-x-0 origin-left'
+    x-transition:enter-end='transform scale-x-1 origin-left'
+    class='grid grid-cols-1 gap-4 auto-rows-[16rem]'
+  >
+    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <!-- Content for the big Card -->
+    </Card>
+  </div>
+</div>
+
+<style>
+  .origin-left {
+    transform-origin: left;
+  }
+</style>
+
+<style>
+  p {
+    font-size: 1.2rem;
+  }
+  strong {
+    color: #fd38e9;
+  }
+</style>
