@@ -24,16 +24,41 @@ import Card from './Card.astro';
     x-transition:enter='transition ease-out duration-1000'
     x-transition:enter-start='transform scale-x-0 origin-left'
     x-transition:enter-end='transform scale-x-1 origin-left'
-    class='grid grid-cols-3 gap-4 auto-rows-[16rem]'
+    class='grid grid-cols-3 gap-4 auto-rows-[17rem]'
   >
     <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <!-- Content for Card 1 -->
+      <div class='flex flex-col p-5'>
+        <p class='my-4'><strong>Multi-Touch Attribution</strong></p>
+        <p class='mb-4'>
+          I developed an app that enables marketing clients to <strong
+            >predict the performance</strong
+          > of their marketing channels using their data and ML models.
+        </p>
+        <p class='mx-auto mb-4 underline'>View tech stack</p>
+      </div>
     </Card>
     <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <!-- Content for Card 2 -->
+      <div class='flex flex-col p-5'>
+        <p class='my-4'><strong>Data Portrait Analysis</strong></p>
+        <p class='mb-4'>
+          I spearheaded the design and development of a web application that
+          assists the sales team in showcasing the customer data and <strong
+            >securing sales</strong
+          >.
+        </p>
+        <p class='mx-auto mb-4 underline'>View tech stack</p>
+      </div>
     </Card>
     <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <!-- Content for Card 3 -->
+      <div class='flex flex-col p-5'>
+        <p class='my-4'><strong>Zoom Call Scheduler</strong></p>
+        <p class='mb-4'>
+          I contributed to the development of an app that allowed the entire
+          company to use a limited pool of Zoom paid accounts, significantly
+          <strong>reducing costs</strong>.
+        </p>
+        <p class='mx-auto mb-4 underline'>View tech stack</p>
+      </div>
     </Card>
   </div>
   <div
@@ -50,16 +75,13 @@ import Card from './Card.astro';
 </div>
 
 <style>
-  .origin-left {
-    transform-origin: left;
-  }
-</style>
-
-<style>
   p {
     font-size: 1.2rem;
   }
   strong {
     color: #fd38e9;
+  }
+  .origin-left {
+    transform-origin: left;
   }
 </style>
