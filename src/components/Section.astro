@@ -1,10 +1,9 @@
 ---
 interface SectionProps {
   id: string;
-  maxWidth?: string;
 }
 
-const { id, maxWidth } = Astro.props as SectionProps;
+const { id } = Astro.props as SectionProps;
 ---
 
 <section
@@ -14,7 +13,7 @@ const { id, maxWidth } = Astro.props as SectionProps;
   ${Astro.props.class}
   section scroll-m-20 w-full h-screen py-20 relative`}
 >
-  <div class=`w-full max-w-[${maxWidth}px] mx-auto h-full`>
+  <div class=`w-full mx-auto h-full max-w-[1100px]`>
     <slot />
   </div>
 </section>

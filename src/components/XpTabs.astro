@@ -1,6 +1,7 @@
 ---
 // Import Card component
 import Card from './Card.astro';
+import FlipCard from './FlipCard.astro';
 ---
 
 <div x-data="{ tab: 'grid' }">
@@ -26,8 +27,8 @@ import Card from './Card.astro';
     x-transition:enter-end='transform scale-x-1 origin-left'
     class='grid grid-cols-3 gap-4 auto-rows-[17rem]'
   >
-    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <div class='flex flex-col p-5'>
+    <FlipCard class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <div slot='front' class='flex flex-col p-5'>
         <p class='my-4'><strong>Multi-Touch Attribution</strong></p>
         <p class='mb-4'>
           I developed an app that enables marketing clients to <strong
@@ -36,9 +37,12 @@ import Card from './Card.astro';
         </p>
         <p class='mx-auto mb-4 underline'>View tech stack</p>
       </div>
-    </Card>
-    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <div class='flex flex-col p-5'>
+      <div slot='back' class='w-full h-full bg-accent-pink'>
+        <p>Back</p>
+      </div>
+    </FlipCard>
+    <FlipCard class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <div slot='front' class='flex flex-col p-5'>
         <p class='my-4'><strong>Data Portrait Analysis</strong></p>
         <p class='mb-4'>
           I spearheaded the design and development of a web application that
@@ -48,9 +52,12 @@ import Card from './Card.astro';
         </p>
         <p class='mx-auto mb-4 underline'>View tech stack</p>
       </div>
-    </Card>
-    <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <div class='flex flex-col p-5'>
+      <div slot='back' class='w-full h-full bg-accent-pink'>
+        <p>Back</p>
+      </div>
+    </FlipCard>
+    <FlipCard class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
+      <div slot='front' class='w-full h-full flex flex-col p-5 content-between'>
         <p class='my-4'><strong>Zoom Call Scheduler</strong></p>
         <p class='mb-4'>
           I contributed to the development of an app that allowed the entire
@@ -59,7 +66,10 @@ import Card from './Card.astro';
         </p>
         <p class='mx-auto mb-4 underline'>View tech stack</p>
       </div>
-    </Card>
+      <div slot='back' class='w-full h-full bg-accent-pink'>
+        <p>Back</p>
+      </div>
+    </FlipCard>
   </div>
   <div
     x-show="tab === 'single'"
@@ -69,14 +79,59 @@ import Card from './Card.astro';
     class='grid grid-cols-1 gap-4 auto-rows-[16rem]'
   >
     <Card class='shadow-[8px_8px_0px#fd38e9] border-[4px]'>
-      <!-- Content for the big Card -->
+      <div class='grid grid-cols-2'>
+        <div class='col-span-1 p-8'>
+          <p class='mt-2'><strong>Senior Software Engineer</strong></p>
+          <p class='italic text-accent-pink text-[.8rem] mb-1'>
+            Growth Acceleration Partners | 2021 - Present
+          </p>
+          <ul class='list-disc'>
+            <li>
+              Spearheaded the development of a new app for pre-sales based on
+              prior R&D.
+            </li>
+            <li>Designed the UI for the initial app and new features.</li>
+            <li>
+              Participated in the migration of an app from Looker hosting to
+              AWS.
+            </li>
+            <li>Created back-end functionalities using AWS Lambda.</li>
+          </ul>
+        </div>
+        <div class='col-span-1 p-8'>
+          <p class='mt-2'><strong>Software Engineer</strong></p>
+          <p class='italic text-accent-pink text-[12px] mb-1'>
+            Avantica Technologies | 2018 - 2021
+          </p>
+          <ul class='list-disc'>
+            <li>
+              Owned maintenance and bug-fixing of web and desktop apps (React,
+              Java, C#).
+            </li>
+            <li>
+              Designed and developed new features for web apps using React and
+              Java (Spring Boot).
+            </li>
+            <li>
+              Developed and maintained BI processes using SQL Server Analysis
+              Services.
+            </li>
+          </ul>
+        </div>
+        <div class='col-span-1'></div>
+      </div>
     </Card>
   </div>
 </div>
 
 <style>
   p {
+    font-size: 1.1rem;
+  }
+  h3 {
     font-size: 1.2rem;
+    color: #fd38e9;
+    font-weight: 500;
   }
   strong {
     color: #fd38e9;

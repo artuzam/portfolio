@@ -1,0 +1,23 @@
+---
+import Card from './Card.astro';
+---
+
+<Card class=`
+  ${Astro.props.class}
+  group [perspective:1000px]`>
+  <div class='absolute w-full h-full'>
+    <div
+      class='absolute w-full h-full
+    transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'
+    >
+      <div class='absolute w-full h-full [backface-visibility:hidden]'>
+        <slot name='front' />
+      </div>
+      <div
+        class='absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]'
+      >
+        <slot name='back' />
+      </div>
+    </div>
+  </div>
+</Card>
