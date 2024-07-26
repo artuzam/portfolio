@@ -11,6 +11,9 @@ export default {
         'accent-pink': '#FD38E9',
         'background-pink': '#FFD8FB',
       },
+      backgroundImage: {
+        'pattern': 'url("/plus-pattern.svg")',
+        }
     },
   },
   plugins: [require('tailwindcss-3d')],
