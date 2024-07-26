@@ -4,6 +4,13 @@ import CalendarIcon from './icons/CalendarIcon.astro';
 import GitHubLogo from './icons/GitHubLogo.astro';
 import LinkedInLogo from './icons/LinkedInLogo.astro';
 import MailIcon from './icons/MailIcon.astro';
+
+const URLS = {
+  mail: 'mailto:charliecazc@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/zamorarturo/',
+  github: 'https://github.com/artuzam',
+  calendly: 'https://calendly.com',
+};
 ---
 
 <div class='flex flex-col justify-center h-full w-full mt-5'>
@@ -33,15 +40,21 @@ import MailIcon from './icons/MailIcon.astro';
         border-[4px] px-5 py-4 flex flex-col justify-center items-center`
       >
         <div class='grid grid-cols-3 gap-6 place-content-around'>
-          <MailIcon
-            class='size-12 cursor-pointer transition-transform transform hover:scale-110'
-          />
-          <LinkedInLogo
-            class='size-12 cursor-pointer transition-transform transform hover:scale-110'
-          />
-          <GitHubLogo
-            class='size-9 mt-1 cursor-pointer transition-transform transform hover:scale-110'
-          />
+          <a href={URLS.mail} target='_blank' class='mx-auto'>
+            <MailIcon
+              class='size-12 cursor-pointer transition-transform transform hover:scale-110'
+            />
+          </a>
+          <a href={URLS.linkedin} target='_blank' class='mx-auto'>
+            <LinkedInLogo
+              class='size-12 cursor-pointer transition-transform transform hover:scale-110'
+            />
+          </a>
+          <a href={URLS.github} target='_blank' class='mx-auto'>
+            <GitHubLogo
+              class='size-9 mt-1 cursor-pointer transition-transform transform hover:scale-110'
+            />
+          </a>
         </div>
       </Card>
     </div>
@@ -53,7 +66,7 @@ import MailIcon from './icons/MailIcon.astro';
       >
         <CalendarIcon class='size-16 mx-auto mb-4' />
         <h1 class='text-3xl font-bold mb-4'>Book a call!</h1>
-        <a href='https://calendly.com' target='_blank' class='mx-auto'>
+        <a href={URLS.calendly} target='_blank' class='mx-auto'>
           <p class='mx-auto
           underline'>Calendly</p>
         </a>
