@@ -13,7 +13,7 @@ export default {
       },
       backgroundImage: {
         'pattern': 'url("/plus-pattern.svg")',
-        }
+      },
     },
   },
   plugins: [require('tailwindcss-3d')],
