@@ -5,6 +5,7 @@ import NavBar from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Experience from '../components/Experience.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout
@@ -36,7 +37,9 @@ import Experience from '../components/Experience.astro';
       </Section>
     </div>
     <div id='/' class='snap-center'>
-      <Section id='contact' class='bg-background-green' />
+      <Section id='contact' class='bg-background-green'>
+        <Contact />
+      </Section>
     </div>
   </main>
 </Layout>
